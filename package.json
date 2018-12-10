@@ -1,0 +1,19 @@
+{
+  "name": "mongo_managerial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrienPercevault/Mongo_Managerial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrienPercevault/Mongo_Managerial/issues"
+  },
+  "homepage": "https://github.com/AdrienPercevault/Mongo_Managerial#readme"
+}
