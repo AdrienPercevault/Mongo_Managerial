@@ -1,10 +1,15 @@
 {
     "lastname": "Macgregore",
     "firstname":"john",
-    "age":"29",
-    "sexe": "M",
+    "birthday":"10/01/1988",
+    "adress":"10 rue de la soif",
+    "city":"Nantes",
+    "zipcode":"44000",
+    "state":"france",
+    "gender": "M",
     "email":"john.macgregore@hotmail.fr",
     "password" : null,
     "role":"directeur",
-    "manager": null
+    "manager": null,
+    "hire_date": "10/12/2018"
 }
