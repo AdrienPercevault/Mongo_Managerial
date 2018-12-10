@@ -11,5 +11,8 @@
     "password" : null,
     "role":"directeur",
     "manager": null,
-    "hire_date": "10/12/2018"
+    "hire_date": "10/12/2018",
+    "vacation": "30",
+    "salary":"100000000"
+
 }
