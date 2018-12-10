@@ -1,0 +1,10 @@
+{
+    "lastname": "Macgregore",
+    "firstname":"john",
+    "age":"29",
+    "sexe": "M",
+    "email":"john.macgregore@hotmail.fr",
+    "password" : null,
+    "role":"directeur",
+    "manager": null
+}
