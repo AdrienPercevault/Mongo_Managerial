@@ -13,7 +13,8 @@
 
     "birth": {
         "birthday": "10/01/1988",
-        "birthplace": "france"
+        "birthplace": "france",
+        "ethnic": "français"
     },
 
     "gender": "M",
