@@ -11,7 +11,11 @@
         "state": "france"
     },
 
-    "birthday": "10/01/1988",
+    "birth": {
+        "birthday": "10/01/1988",
+        "birthplace": "france"
+    },
+
     "gender": "M",
     "email": "john.macgregore@hotmail.fr",
     "password" : null,
