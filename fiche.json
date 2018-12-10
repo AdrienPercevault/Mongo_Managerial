@@ -1,18 +1,24 @@
 {
-    "lastname": "Macgregore",
-    "firstname":"john",
-    "birthday":"10/01/1988",
-    "adress":"10 rue de la soif",
-    "city":"Nantes",
-    "zipcode":"44000",
-    "state":"france",
+    "name": {
+        "lastname": "Macgregore",
+        "firstname": "john"
+    },
+
+    "location": {
+        "adress": "10 rue de la soif",
+        "city": "Nantes",
+        "zipcode": "44000",
+        "state": "france"
+    },
+
+    "birthday": "10/01/1988",
     "gender": "M",
-    "email":"john.macgregore@hotmail.fr",
+    "email": "john.macgregore@hotmail.fr",
     "password" : null,
-    "role":"directeur",
+
+    "role": "directeur",
     "manager": null,
     "hire_date": "10/12/2018",
     "vacation": "30",
-    "salary":"100000000"
-
+    "salary": "5555"
 }
