@@ -1,11 +1,11 @@
 {
     "name": {
-        "lastname": "Macgregore",
-        "firstname": "john"
+        "lastname": "elineau",
+        "firstname": "anthony  "
     },
 
     "birth": {
-        "birthday": "10/01/1988",
+        "birthday": "02/08/1989",
         "birthplace": "france",
         "ethnic": "français"
     },
@@ -13,7 +13,7 @@
     "connection": {
         "login": "JMacGregore",
         "password" : "directeur",
-        "email": "john.macgregore@hotmail.fr"
+        "email": "anthony.elineau@hotmail.fr"
     },
 
     "informations": {
