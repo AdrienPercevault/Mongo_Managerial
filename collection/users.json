@@ -1,7 +1,7 @@
 {
     "name": {
-        "lastname": "elineau",
-        "firstname": "anthony  "
+        "lastname": "MacGregore",
+        "firstname": "Peter"
     },
 
     "birth": {
@@ -11,7 +11,7 @@
     },
 
     "connection": {
-        "login": "JMacGregore",
+        "login": "PMacGregore",
         "password" : "directeur",
         "email": "anthony.elineau@hotmail.fr"
     },
