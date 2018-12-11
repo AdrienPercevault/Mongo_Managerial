@@ -1,6 +1,7 @@
 {
     "name": "projetTruc",
     "description": "machin chose",
+    "project chef": "Peter MacGregore",
     "number_employe": "15",
     "budget": "15000",
     "begin_date": "25/01/2018",
