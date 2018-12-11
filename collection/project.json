@@ -2,7 +2,7 @@
     "id": "1",
     "name": "projetTruc",
     "description": "machin chose",
-    "project chef": "Peter MacGregore",
+    "project_chief": "Peter MacGregore",
     "budget": "15000",
     "begin_date": "25/01/2018",
     "end_date": "15/12/2019",
