@@ -11,7 +11,7 @@ clientMongoDB.init()
     app.use('/vacation', vacationRouter)
 
     app.get('/', (req, res) => {
-        res.send('TP initiation express')
+        res.send('Mongo management')
     })
 
     app.listen(9999, () => {
