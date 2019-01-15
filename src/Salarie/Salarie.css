@@ -25,3 +25,13 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .3rem 0;
+}
+
