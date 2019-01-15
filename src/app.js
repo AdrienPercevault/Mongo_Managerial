@@ -12,6 +12,7 @@ clientMongoDB.init()
 
     app.get('/', (req, res) => {
         res.send('Mongo management')
+        
     })
 
     app.listen(9999, () => {
