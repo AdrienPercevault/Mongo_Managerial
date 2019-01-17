@@ -36,26 +36,4 @@ router.post('/', (req, res) => {
     .catch(error => res.send(error))
 });
 
-router.delete('/:projetId', (req, res) => {
-    mongoDBClient.db.collection('projets').deleteOne({
-        id: '0001',
-        name: 'Projet#0001',
-        description: 'Description du projet',
-        project_chief: 'Nom Prénom',
-        budget: '15000',
-        begin_date: '01/02/2019',
-        end_date: '01/06/2019',
-        finish: 'false',
-        intern: 'true'
-    })
-    .then(result => res.send(result))
-    .catch(error => res.send(error))
-});
-
-router.put('/:projetId', (req, res) => {
-    mongoDBClient.db.collection('projets').updateOne({})
-    .then(result => res.send(result))
-    .catch(error => res.send(error))
-});
-
 module.exports = router;

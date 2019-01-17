@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/AdrienPercevault/Mongo_Managerial/issues"
   },
-  "homepage": "https://github.com/AdrienPercevault/Mongo_Managerial#readme"
+  "homepage": "https://github.com/AdrienPercevault/Mongo_Managerial#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.12"
+  }
 }
