@@ -8,6 +8,7 @@ router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/html/api.html'));
 });
 
+// Link Project html page
 router.get('/project', function (req, res) {
     res.sendFile(path.join(__dirname + '/html/project.html'));
 });

@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <link rel="stylesheet" type="text/css" href="../css/project.css">
-            <body>
-
-                    <ul>
-                        <li><a href="../Salarie/Salarie.html">Salarie</a></li>
-                        <li><a class="active" href="../Projet/Projet.html">Projet</a></li>
-                        <li><a href="../Vacances/Vacances.html">Vacances</a></li>
-                        <li><a href="../Liste_projet/liste_projet.html">Liste Projet</a></li>
-                        <li><a href="../Liste_salarie/liste_salarie.html">Liste Salarie</a></li>
-                    </ul>
-
-            </body>
+        <link rel="stylesheet" type="text/css" href="project.css"/>
+        <div>
+            <ul>
+                <li><a href="/api">Home</a></li>
+                <li><a class="active" href="/api/project">Projet</a></li>
+                <li><a href="/api/projects">Liste des Projets</a></li>
+            </ul>
+        </div>
     </head>
-    <body>   
-        <p> 
+    <body>
         <form method="POST">
             <label for="name">Saisir le nom du Projet</label>
-            <input type="text" name="name" placeholder="Nom">
+            <input type="text" name="name" placeholder="Nom" />
             <label for="description">Saisir la description du Projet</label>
-            <input type="text" name="description" placeholder="description">
+            <input type="text" name="description" placeholder="Description" />
             <label for="project_chief">Saisir le chef de projet</label>
-            <input type="text" name="project_chief" placeholder="Chef de Projet">
-            <label for="budget">Saisir le budget :</label>
-            <input type="number" name="budget" placeholder="Budget">
+            <input type="text" name="project_chief" placeholder="Chef de Projet" />
+            <label for="budget">Saisir le budget du projet</label>
+            <input type="number" name="budget" placeholder="Budget" />
             <label for="begin_date">Saisir la date de debut</label>
-            <input type="date" name="begin_date" placeholder="Begin_date">
+            <input type="text" name="begin_date" placeholder="Date de debut" />
             <label for="end_date">Saisir la date de fin</label>
-            <input type="date" name="end_date" placeholder="End_date">
-            <input type="submit" value="envoyer">
+            <input type="text" name="end_date" placeholder="Date de fin" />
+            <input type="submit" value="envoyer" />
         </form>
-        </p>
     </body>
 </html>

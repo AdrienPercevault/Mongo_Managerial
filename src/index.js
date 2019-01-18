@@ -1,4 +1,5 @@
 // Imports
+ProjectController = require('./projectController');
 let express = require('express')
 let app = express();
 let apiRoutes = require("./api-routes")
@@ -15,20 +16,24 @@ mongoose.connect('mongodb://localhost/managerial');
 // Configure bodyparser to handle post requests
 app.use(bodyParser.urlencoded({
      extended: true
-  }));
+}));
 app.use(bodyParser.json());
 
 // Use Api routes in the App
-app.use('/api', apiRoutes)
+app.use('/api', apiRoutes);
+
+// Use css files
+app.use(express.static(__dirname + '/css'));
+console.log(__dirname)
 
 // Linx to html file for default url
 app.get('/', function (req, res) {
-     res.sendFile(path.join(__dirname + '/html/project.html'));
+     res.sendFile(path.join(__dirname + '/html/api.html'));
 });
-//recupere le le formulaire sur project il reste a l'envoyer dans project.json
-app.post('/',function(req,res){
-     console.log(req.body);
-     res.redirect('/');
+
+// Get form from project to create it
+app.post('/api/project', function(req,res){
+     ProjectController.new(req, res);
 })
 
 // Launch app to listen to specified port

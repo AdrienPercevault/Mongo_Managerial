@@ -33,10 +33,7 @@ exports.new = function (req, res) {
         if (err) {
             res.json(err);
         }
-        res.json({
-            message: 'New project created!',
-            data: project
-        });
+        res.redirect('/api/projects');
     });
 };
 
