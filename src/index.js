@@ -23,8 +23,13 @@ app.use('/api', apiRoutes)
 
 // Linx to html file for default url
 app.get('/', function (req, res) {
-     res.sendFile(path.join(__dirname + '/html/index.html'));
+     res.sendFile(path.join(__dirname + '/html/project.html'));
 });
+//recupere le le formulaire sur project il reste a l'envoyer dans project.json
+app.post('/',function(req,res){
+     console.log(req.body);
+     res.redirect('/');
+})
 
 // Launch app to listen to specified port
 app.listen(port, function () {
