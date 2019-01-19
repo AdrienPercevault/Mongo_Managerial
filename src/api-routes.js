@@ -13,6 +13,11 @@ router.get('/project', function (req, res) {
     res.sendFile(path.join(__dirname + '/html/project.html'));
 });
 
+// // Link Projects html page
+// router.get('/projects', function (req, res) {
+//     res.sendFile(path.join(__dirname + '/html/projects.html'));
+// });
+
 // Project routes
 router.route('/projects')
     .get(projectController.index)

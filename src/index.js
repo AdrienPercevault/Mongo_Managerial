@@ -1,5 +1,5 @@
 // Imports
-ProjectController = require('./projectController');
+projectController = require('./projectController');
 let express = require('express')
 let app = express();
 let apiRoutes = require("./api-routes")
@@ -24,7 +24,6 @@ app.use('/api', apiRoutes);
 
 // Use css files
 app.use(express.static(__dirname + '/css'));
-console.log(__dirname)
 
 // Linx to html file for default url
 app.get('/', function (req, res) {
@@ -33,7 +32,7 @@ app.get('/', function (req, res) {
 
 // Get form from project to create it
 app.post('/api/project', function(req,res){
-     ProjectController.new(req, res);
+     projectController.new(req, res);
 })
 
 // Launch app to listen to specified port
