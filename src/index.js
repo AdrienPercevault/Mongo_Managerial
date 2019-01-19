@@ -35,6 +35,11 @@ app.post('/api/project', function(req,res){
      projectController.new(req, res);
 })
 
+//Get form from salarie to create it
+app.post('/api/salarie', function(req,res){
+     salarieController.new(req,res);
+})
+
 // Launch app to listen to specified port
 app.listen(port, function () {
      console.log("Running on port " + port);

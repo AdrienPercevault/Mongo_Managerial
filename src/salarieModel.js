@@ -6,27 +6,33 @@ var salarieSchema = mongoose.Schema({
     name: {
         lastname:{
             type: String,
-            required:true,
+            required:true
         },
         firstname:{
             type: String,
-            required:true,
+            required:true
         },
     },
 
     birth: {
         birthday: Date,
-        birthplace:{
-            type:Date,
-            required:true,
-        },
+        birthplace: String,
         ethnic:String,
     },
 
     connection:{
-        login: String,
-        password: String,
-        email: String,
+        login:{
+            type:String,
+            required:true
+        },
+        password:{
+            type:String,
+            required:true
+        },
+        email:{
+            type:String,
+            required:true
+        },
     },
 
     information:{
@@ -38,8 +44,11 @@ var salarieSchema = mongoose.Schema({
 
     hire:{
         hire_date: Date,
+        fire_date: Date,
         Salary: Number,
     },
+
+
 
 });
 
