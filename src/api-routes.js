@@ -3,6 +3,8 @@ let router = require('express').Router();
 var projectController = require('./projectController');
 var salarieController = require('./salarieController');
 const path = require('path');
+let express = require('express')
+let app = express();
 
 // Link API html page
 router.get('/', function (req, res) {
@@ -24,6 +26,13 @@ router.get('/salarie', function(req, res){
 //     res.sendFile(path.join(__dirname + '/html/projects.html'));
 // });
 
+// Get projects list
+router.get('/api/projects', function(req,res){
+    projects = projectController.index(req, res);
+    console.log("bonjour" + projects)
+    res.render(__dirname + '/html/projects.html', {projects: projects});
+})
+
 // Project routes
 router.route('/projects')
     .get(projectController.index)
@@ -35,7 +44,7 @@ router.route('/projects/:project_id')
     .put(projectController.update)
     .delete(projectController.delete);
 
-    //salarie routes
+//salarie routes
 router.route('/salaries')
     .get(salarieController.index)
     .post(salarieController.new);

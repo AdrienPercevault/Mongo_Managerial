@@ -2,17 +2,23 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="/api.css"/>
-        <body>
+        <script type="text/javascript" src="../projectController.js"></script>
+        <div>
             <ul>
                 <li><a href="/api">Home</a></li>
                 <li><a href="/api/project">Projet</a></li>
                 <li><a class="active" href="/api/projects">Liste des Projets</a></li>
+                <li><a href="/api/salarie">Salarie</a></li>
+                <li><a href="/api/salaries">Liste des Salaries</a></li>
             </ul>
-        </body>
+        </div>
     </head>
     <body>
         <div>
+            <label><%= projects %></label>
 
-        </div>
+            <% projects.forEach(function(todo, index) { %>
+                <li><a href="/todo/supprimer/<%= index %>">✘</a> <%= todo %></li>
+            <% }); %>        </div>
     </body>
 </html>

@@ -15,6 +15,7 @@ exports.index = function (req, res) {
             message: "Projects retrieved successfully",
             data: projects
         });
+        return projects;
     });
 };
 
