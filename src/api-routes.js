@@ -1,6 +1,7 @@
 // Imports
 let router = require('express').Router();
 var projectController = require('./projectController');
+var salarieController = require('./salarieController');
 const path = require('path');
 
 // Link API html page

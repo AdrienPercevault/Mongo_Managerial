@@ -1,5 +1,6 @@
 // Imports
 projectController = require('./projectController');
+salarieController = require('./salarieController');
 let express = require('express')
 let app = express();
 let apiRoutes = require("./api-routes")
