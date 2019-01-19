@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="Salarie.css"/>
-
-        <ul>
-            <li><a class="active" href="../Salarie/Salarie.html">Salarie</a></li>
-            <li><a href="../Projet/Projet.html">Projet</a></li>
-            <li><a href="../Vacances/Vacances.html">Vacances</a></li>
-            <li><a href="../Liste_projet/liste_projet.html">Liste Projet</a></li>
-            <li><a href="../Liste_salarie/liste_salarie.html">Liste Salarie</a></li>
-        </ul>    
+        <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+        <div>
+            <ul>
+                <li><a href="/api">Home</a></li>
+                <li><a href="/api/project">Projet</a></li>
+                <li><a href="/api/projects">Liste des Projets</a></li>
+                <li><a class="active" href="/api/salarie">Salarie</a></li>
+                <li><a href="/api/salaries">Liste des Salaries</a></li>
+            </ul>
+        </div>
     </head>
     <body>
         <form method="POST">
@@ -23,14 +24,20 @@
             <input type="text" name ="lastname" placeholder="Nom">
             <label for="firstname"></label>
             <input type="text" name ="firstname" placeholder="Prenom">
-            <label for="adress">Saisir votre adresse :</label>
-            <input type="text" name ="adress" placeholder="Adresse">
-            <label for="zipcode"></label>
-            <input type="number" name ="zipcode" placeholder="Code Postale">
-            <label for="city"></label>
-            <input type="text" name ="city" placeholder="Ville">
-            <label for="state"></label>
-            <input type="text" name ="state" placeholder="Pays">
+            <p>Saisir vos données de naissance : </p>
+            <label for="birthday"></label>
+            <input type="text" name="birthday" placeholder="Birthday">
+            <label for="birthplace"></label>
+            <input type="text" name="birthplace" placeholder="State of birth">
+            <label for="ethnic"></label>
+            <input type="text" name="ethnic" placeholder="Nationality">
+            <p>Saisir votre poste et la prise : </p>
+            <label for="role"></label>
+            <input type="text" name="role" placeholder="Poste">
+            <p>Date d'entree dans l'entreprise :</p>
+            <label for="hire_date"></label>
+            <input type="text " name="hire_date" placeholder="Date d'entree">
+            <input type="submit" value="envoyer" />
         </form>
     </body>
 </html>
