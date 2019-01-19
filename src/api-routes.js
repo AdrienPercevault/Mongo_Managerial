@@ -13,6 +13,11 @@ router.get('/project', function (req, res) {
     res.sendFile(path.join(__dirname + '/html/project.html'));
 });
 
+//link Salarie html page
+router.get('/salarie', function(req, res){
+    res.sendFile(path.join(__dirname + '/html/salarie.html'));
+})
+
 // // Link Projects html page
 // router.get('/projects', function (req, res) {
 //     res.sendFile(path.join(__dirname + '/html/projects.html'));
@@ -28,6 +33,17 @@ router.route('/projects/:project_id')
     .patch(projectController.update)
     .put(projectController.update)
     .delete(projectController.delete);
+
+    //salarie routes
+router.route('/salaries')
+    .get(salarieController.index)
+    .post(salarieController.new);
+
+router.route('/salaries/:salarie_id')
+    .get(salarieController.view)
+    .patch(salarieController.update)
+    .put(salarieController.update)
+    .delete(salarieController.delete);
 
 // Export API routes
 module.exports = router;
