@@ -10,12 +10,7 @@ exports.index = function (req, res) {
                 message: err,
             });
         }
-        res.json({
-            status: "success",
-            message: "Projects retrieved successfully",
-            data: projects
-        });
-        return projects;
+        res.json(projects);
     });
 };
 
@@ -44,10 +39,7 @@ exports.view = function (req, res) {
         if (err) {
             res.send(err);
         }
-        res.json({
-            message: 'Project details loading...',
-            data: project
-        });
+        res.send(project);
     });
 };
 
@@ -69,10 +61,7 @@ exports.update = function (req, res) {
             if (err) {
                 res.json(err);
             }
-            res.json({
-                message: 'Project Info updated',
-                data: project
-            });
+            res.send(project);
         });
     });
 };

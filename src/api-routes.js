@@ -24,25 +24,26 @@ router.get('/salarie', function(req, res){
 // // Link Projects html page
 // router.get('/projects', function (req, res) {
 //     res.sendFile(path.join(__dirname + '/html/projects.html'));
-// });
 
-// Get projects list
-router.get('/api/projects', function(req,res){
-    projects = projectController.index(req, res);
-    console.log("bonjour" + projects)
-    res.render(__dirname + '/html/projects.html', {projects: projects});
-})
+// // Get projects list
+// router.get('/projects', function(req,res){
+//     projects = projectController.index(req, res);
+//     console.log("bonjour" + projects);
+//     res.render(__dirname + '/html/projects.html', {projects: projects});
+// })
 
 // Project routes
 router.route('/projects')
     .get(projectController.index)
-    .post(projectController.new);
+    .post(projectController.new)
+    .delete(projectController.delete);
 
 router.route('/projects/:project_id')
-    .get(projectController.view)
-    .patch(projectController.update)
-    .put(projectController.update)
-    .delete(projectController.delete);
+    .get(projectController.view);
+
+router.route('/projects/delete/:project_id')
+    // .get(projectController.view)
+    .get(projectController.delete);
 
 //salarie routes
 router.route('/salaries')

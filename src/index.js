@@ -36,6 +36,12 @@ app.post('/api/project', function(req,res){
      projectController.new(req, res);
 })
 
+// Get id to delete project
+app.use('/api/project', function(req,res){
+     console.log("test");
+     projectController.delete(req, res);
+})
+
 //Get form from salarie to create it
 app.post('/api/salarie', function(req,res){
      salarieController.new(req,res);
