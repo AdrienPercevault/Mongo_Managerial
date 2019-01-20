@@ -3,53 +3,36 @@ var mongoose = require('mongoose');
 
 // Setup schema
 var salarieSchema = mongoose.Schema({
-    name: {
-        lastname:{
-            type: String,
-            required:true
-        },
-        firstname:{
-            type: String,
-            required:true
-        },
+    lastname:{
+        type: String,
+        required:true
     },
-
-    birth: {
-        birthday: Date,
-        birthplace: String,
-        ethnic:String,
+    firstname:{
+        type: String,
+        required:true
     },
-
-    connection:{
-        login:{
-            type:String,
-            required:true
-        },
-        password:{
-            type:String,
-            required:true
-        },
-        email:{
-            type:String,
-            required:true
-        },
+    birthday: Date,
+    birthplace: String,
+    ethnic:String,
+    login:{
+        type:String,
+        required:true
     },
-
-    information:{
-        gender: String,
-        role: String,
-        manager: String,
-        vacation: Number,
+    password:{
+        type:String,
+        required:true
     },
-
-    hire:{
-        hire_date: Date,
-        fire_date: Date,
-        Salary: Number,
+    email:{
+        type:String,
+        required:true
     },
-
-
-
+    gender: String,
+    role: String,
+    manager: String,
+    vacation: Number,
+    hire_date: Date,
+    fire_date: Date,
+    Salary: Number
 });
 
 // Export Project model

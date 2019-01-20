@@ -1,84 +1,96 @@
-//imports
+// Imports
 Salarie = require('./salarieModel');
 
-//Handle index actions
-exports.index = function (req, res){
-    Salarie.get(function (err, salaries){
-        if(err){
+// Handle index actions
+exports.index = function (req, res) {
+    Salarie.get(function (err, salaries) {
+        if (err) {
             res.json({
                 status: "error",
-                message:err,
+                message: err,
             });
         }
-        res.json({
-            status:"sucess",
-            message: "Salaries retrieved successfully",
-            data: salaries
-        });
+        res.json(salaries);
     });
 };
 
 // Handle create salarie
-exports.new = function(req,res){
+exports.new = function (req, res) {
     var salarie = new Salarie();
-    salarie.name = req.body.name;
-    salarie.birth = req.body.birth;
-    salarie.connection = req.body.connection;
-    salarie.information = req.body.information;
-    salarie.save(function(err){
-        if(err){
+    salarie.lastname = req.body.lastname;
+    salarie.firstname = req.body.firstname;
+    salarie.birthday = req.body.birthday;
+    salarie.birthplace = req.body.birthplace;
+    salarie.ethnic = req.body.ethnic;
+    salarie.login = req.body.login;
+    salarie.password = req.body.password;
+    salarie.email = req.body.email;
+    salarie.gender = req.body.gender;
+    salarie.role = req.body.role;
+    salarie.manager = req.body.manager;
+    salarie.vacation = req.body.vacation;
+    salarie.hire_date = req.body.hire_date;
+    salarie.fire_date = req.body.fire_date;
+    salarie.Salary = req.body.Salary;
+    salarie.save(function (err) {
+        if (err) {
             res.json(err);
         }
         res.redirect('/api/salaries');
     });
 };
 
-//Handle view salarie
-exports.view = function (req,res){
-    Salarie.findById(req.params.salarie_id, function(err,salarie){
-        if (err){
+// Handle view salarie
+exports.view = function (req, res) {
+    Salarie.findById(req.params.salarie_id, function (err, salarie) {
+        if (err) {
             res.send(err);
         }
-        res.json({
-            message: 'Salarie details loading ...',
-            data:salarie
+        res.send(salarie);
+    });
+};
+
+// Handle update project
+exports.update = function (req, res) {
+    Salarie.findById(req.params.salarie_id, function (err, salarie) {
+        if (err) {
+            res.send(err);
+        }
+        salarie.lastname = req.body.lastname;
+        salarie.firstname = req.body.firstname;
+        salarie.birthday = req.body.birthday;
+        salarie.birthplace = req.body.birthplace;
+        salarie.ethnic = req.body.ethnic;
+        salarie.login = req.body.login;
+        salarie.password = req.body.password;
+        salarie.email = req.body.email;
+        salarie.gender = req.body.gender;
+        salarie.role = req.body.role;
+        salarie.manager = req.body.manager;
+        salarie.vacation = req.body.vacation;
+        salarie.hire_date = req.body.hire_date;
+        salarie.fire_date = req.body.fire_date;
+        salarie.Salary = req.body.Salary;
+        salarie.save(function (err) {
+            if (err) {
+                res.json(err);
+            }
+            res.send(salarie);
         });
     });
 };
 
-//Handle update salarie
-exports.update = function(req,res){
-    Salarie.findById(req.params.salarie_id, function (err, salarie){
-        if (err){
-            res.send(err);
-        }
-        salarie.name = req.body.name;
-        salarie.birth = req.body.birth;
-        salarie.connection = req.body.connection;
-        salarie.information = req.body.information;
-        salarie.save(function(err){
-            if(err){
-                res.json(err);
-            }
-            res.json({
-                message: 'Salarie info updated',
-                data:salarie
-            });
-        });
-    });  
-};
-
-//Handle delete salarie
-exports.delete = function (req,res){
+// Handle delete salarie
+exports.delete = function (req, res) {
     Salarie.remove({
-        _id:req.params.salarie_id
-    }, function (err, salarie){
+        _id: req.params.salarie_id
+    }, function (err, salarie) {
         if (err) {
             res.send(err);
         }
         res.json({
-            status: "sucess",
-            message:'Salarie deleted'
+            status: "success",
+            message: 'Project deleted'
         });
     });
 };

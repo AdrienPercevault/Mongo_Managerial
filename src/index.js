@@ -38,10 +38,12 @@ app.post('/api/project', function(req,res){
      projectController.new(req, res);
 })
 
+/** FONCTIONNE PAS : TEST POUR LA SUPPRESSION DE PROJET VIA LA PAGE PROJECT ET LE FORMULAIRE / BOUTON DE LA PAGE
 // Get id to delete project
 app.delete('/api/project', function(req,res){
      projectController.delete(req, res);
 })
+*/
 
 //Get form from salarie to create it
 app.post('/api/salarie', function(req,res){
