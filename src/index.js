@@ -11,8 +11,10 @@ const path = require('path');
 var db = mongoose.connection;
 var port = process.env.PORT || 9999;
 
-// Connect to Mongoose and set connection variable
+// Connect to Mongoose and set connection variable (localhost)
 mongoose.connect('mongodb://localhost/managerial');
+// Connect to Mongoose and set connection variable (server)
+// mongoose.connect('mongodb://51.77.215.93/managerial');
 
 // Configure bodyparser to handle post requests
 app.use(bodyParser.urlencoded({
@@ -37,8 +39,7 @@ app.post('/api/project', function(req,res){
 })
 
 // Get id to delete project
-app.use('/api/project', function(req,res){
-     console.log("test");
+app.delete('/api/project', function(req,res){
      projectController.delete(req, res);
 })
 

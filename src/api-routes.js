@@ -39,22 +39,28 @@ router.route('/projects')
     .delete(projectController.delete);
 
 router.route('/projects/:project_id')
-    .get(projectController.view);
+    .get(projectController.view)
+    .put(projectController.update)
+    .patch(projectController.update)
+    .delete(projectController.delete);
 
 router.route('/projects/delete/:project_id')
-    // .get(projectController.view)
     .get(projectController.delete);
 
-//salarie routes
+// Salarie routes
 router.route('/salaries')
     .get(salarieController.index)
-    .post(salarieController.new);
+    .post(salarieController.new)
+    .delete(salarieController.delete);
 
 router.route('/salaries/:salarie_id')
     .get(salarieController.view)
-    .patch(salarieController.update)
     .put(salarieController.update)
+    .patch(salarieController.update)
     .delete(salarieController.delete);
+
+router.route('/salaries/delete/:salarie_id')
+    .get(salarieController.delete);
 
 // Export API routes
 module.exports = router;
