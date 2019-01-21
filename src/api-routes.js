@@ -44,8 +44,8 @@ router.route('/projects/:project_id')
     .patch(projectController.update)
     .delete(projectController.delete);
 
-router.route('/projects/delete/:project_id')
-    .get(projectController.delete);
+// router.route('/projects/delete/:project_id')
+//     .get(projectController.delete);
 
 // Salarie routes
 router.route('/salaries')
@@ -59,8 +59,8 @@ router.route('/salaries/:salarie_id')
     .patch(salarieController.update)
     .delete(salarieController.delete);
 
-router.route('/salaries/delete/:salarie_id')
-    .get(salarieController.delete);
+// router.route('/salaries/delete/:salarie_id')
+//     .get(salarieController.delete);
 
 // Export API routes
 module.exports = router;

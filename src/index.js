@@ -1,22 +1,26 @@
 // Imports
 projectController = require('./projectController');
 salarieController = require('./salarieController');
+
+ProjectModel = require('./projectModel')
+SalarieModel = require('./salarieModel')
+
 var cors = require('cors')
 let express = require('express')
 let app = express();
-let apiRoutes = require("./api-routes")
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 const path = require('path');
 
-var db = mongoose.connection;
 var port = process.env.PORT || 9999;
+const managerial = mongoose.connection;
 
 // Connect to Mongoose and set connection variable (localhost)
-mongoose.connect('mongodb://localhost/managerial');
+mongoose.connect('mongodb://localhost/managerial', { useNewUrlParser: true });
 // Connect to Mongoose and set connection variable (server)
-// mongoose.connect('mongodb://51.77.215.93/managerial');
+// mongoose.connect('mongodb://51.77.215.93/managerial', { useNewUrlParser: true });
 
+// Use cors
 app.use(cors());
 
 // Configure bodyparser to handle post requests
@@ -24,9 +28,6 @@ app.use(bodyParser.urlencoded({
      extended: true
 }));
 app.use(bodyParser.json());
-
-// Use Api routes in the App
-app.use('/api', apiRoutes);
 
 app.use(function (req, res, next) {
 	// Website you wish to allow to connect
@@ -42,30 +43,45 @@ app.use(function (req, res, next) {
 	next();
 });
 
-// Use css files
-app.use(express.static(__dirname + '/css'));
+// *************
+// ***PROJECT***
+// *************
 
-// Linx to html file for default url
-app.get('/', function (req, res) {
-     res.sendFile(path.join(__dirname + '/html/api.html'));
-});
+// Affichage
+app.get('/api/projects', projectController.index);
 
 // Get form from project to create it
-app.post('/api/project', function(req,res){
-     projectController.new(req, res);
-})
+app.post('/api/projects', projectController.new);
 
-/** FONCTIONNE PAS : TEST POUR LA SUPPRESSION DE PROJET VIA LA PAGE PROJECT ET LE FORMULAIRE / BOUTON DE LA PAGE
-// Get id to delete project
-app.delete('/api/project', function(req,res){
-     projectController.delete(req, res);
-})
-*/
+// Delete project
+app.delete('/api/projects/:project_id', projectController.delete);
 
-//Get form from salarie to create it
-app.post('/api/salarie', function(req,res){
-     salarieController.new(req,res);
-})
+// Update project
+app.put('/api/projects/:project_id', projectController.update);
+
+// Get project by id
+app.get('/api/projects/:project_id', projectController.view);
+
+// *************
+// ***SALARIE***
+// *************
+
+// Affichage
+app.get('/api/salaries', salarieController.index);
+
+// Get form from salarie to create it
+app.post('/api/salaries', salarieController.new);
+
+// Delete salarie
+app.delete('/api/salaries/:salarie_id', salarieController.delete);
+
+// Update salarie
+app.put('/api/salaries/:salarie_id', salarieController.update);
+
+// Get salarie by id
+app.get('/api/salaries/:salarie_id', salarieController.view);
+
+// *************
 
 // Launch app to listen to specified port
 app.listen(port, function () {

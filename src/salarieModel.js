@@ -3,29 +3,14 @@ var mongoose = require('mongoose');
 
 // Setup schema
 var salarieSchema = mongoose.Schema({
-    lastname:{
-        type: String,
-        required:true
-    },
-    firstname:{
-        type: String,
-        required:true
-    },
+    lastname: String,
+    firstname: String,
     birthday: Date,
     birthplace: String,
     ethnic:String,
-    login:{
-        type:String,
-        required:true
-    },
-    password:{
-        type:String,
-        required:true
-    },
-    email:{
-        type:String,
-        required:true
-    },
+    login: String,
+    password: String,
+    email: String,
     gender: String,
     role: String,
     manager: String,
